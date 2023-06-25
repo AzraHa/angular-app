@@ -83,7 +83,7 @@ export class CountryModalComponent implements OnInit {
   ngOnInit(): void {}
 
   handleRowDoubleClick(element: any) {
-    this.dialogRef.close();
+    this.selectedPlace = element;
   }
 
   search() {

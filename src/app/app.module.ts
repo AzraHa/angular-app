@@ -9,9 +9,16 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
+import { InputClickComponent } from './input-click/input-click.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ChildComponent],
+  providers: [
+    { provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+  ],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     MatDialogModule,
@@ -20,12 +27,7 @@ import { AppComponent } from './app.component';
     MatInputModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    InputClickComponent,
   ],
-  providers: [
-    { provide: MatDialogRef, useValue: {} },
-
-    { provide: MAT_DIALOG_DATA, useValue: {} },
-  ],
-  bootstrap: [AppComponent],
 })
 export class AppModule {}

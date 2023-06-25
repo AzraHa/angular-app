@@ -1,4 +1,12 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Inject,
+  forwardRef,
+  EventEmitter,
+  Output,
+  Input,
+} from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -48,6 +56,8 @@ export class PlaceModalComponent implements OnInit {
   selectedPlace: PeriodicElement | undefined;
   isSearchClicked: boolean = false;
 
+  @Output() parentData = new EventEmitter<any>();
+
   ELEMENT_DATA: PeriodicElement[] = [
     { place: 'Novi Grad', city: 'Sarajevo', country: 'Bosna i Hercegovina' },
     { place: 'Stari Grad', city: 'Mostar', country: 'Bosna i Hercegovina' },
@@ -83,6 +93,8 @@ export class PlaceModalComponent implements OnInit {
 
   handleRowDoubleClick(element: any) {
     this.selectedPlace = element;
+    this.parentData.emit('this.selectedPlace');
+    this.dialogRef.close();
   }
 
   search() {

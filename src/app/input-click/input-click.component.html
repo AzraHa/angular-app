@@ -1,0 +1,23 @@
+<div>buttonClicked Data: {{ buttonClicked }}</div>
+
+<button (click)="openDialog2()">haj sad</button>
+
+<input
+  type="text"
+  (click)="openDialog()"
+  [value]="buttonClicked"
+  [(ngModel)]="buttonClicked"
+/>
+
+<div>
+  <label for="place">Place:</label>
+  <input type="text" id="place" [(ngModel)]="buttonClicked" />
+</div>
+<div>
+  <label for="city">City:</label>
+  <input type="text" id="city" [(ngModel)]="buttonClicked" />
+</div>
+<div>
+  <label for="country">Country:</label>
+  <input type="text" id="country" [(ngModel)]="buttonClicked" />
+</div>

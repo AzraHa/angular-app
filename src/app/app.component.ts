@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { CountryModalComponent } from './country-modal/country-modal.component';
 import { PlaceModalComponent } from './place-modal/place-modal.component';
@@ -47,5 +47,11 @@ export class AppComponent {
         this.isDialogOpen = false;
       });
     }
+  }
+
+  valueEmittedFromChildComponent: any;
+
+  parentEventHandlerFunction(valueEmitted: any) {
+    this.valueEmittedFromChildComponent = valueEmitted;
   }
 }
