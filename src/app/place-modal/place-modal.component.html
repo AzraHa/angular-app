@@ -1,0 +1,136 @@
+<div class="center-modal">
+  <div class="modal-form">
+    <form [formGroup]="myForm" (ngSubmit)="search()">
+      <div class="custom-toolbar">
+        <div class="left-content">
+          <span>Izbornik_mjesto</span>
+        </div>
+        <div class="right-content">
+          <button
+            mat-icon-button
+            class="example-icon custom-button"
+            aria-label="Example icon-button with heart icon"
+            (click)="close()"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="modal-content">
+        <div class="place-input">
+          <span>Mjesto:</span>
+          <input
+            class="custom-input"
+            [formControl]="myControl"
+            ngDefaultControl
+            name="place"
+            formControlName="place"
+            [value]="selectedPlace?.place"
+          />
+        </div>
+        <div class="place-input">
+          <span>Općina:</span>
+          <input
+            class="custom-input"
+            [formControl]="myControl"
+            name="city"
+            ngDefaultControl
+            formControlName="city"
+            [value]="selectedPlace?.city"
+          />
+        </div>
+        <div class="place-input">
+          <span>Država:</span>
+          <input
+            class="custom-input"
+            [formControl]="myControl"
+            name="country"
+            ngDefaultControl
+            formControlName="country"
+            [value]="selectedPlace?.country"
+          />
+        </div>
+      </div>
+      <div class="submit-button-container">
+        <button mat-raised-button color="primary" class="bottom-right-button">
+          Traži
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="data-table" *ngIf="isSearchClicked">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8 data-table"
+    >
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell
+          *matCellDef="let element"
+          (dblclick)="handleRowDoubleClick(element)"
+        >
+          {{ element.name }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="place">
+        <th
+          mat-header-cell
+          [ngClass]="{ 'blue-header': true, 'bordered-cell': true }"
+          *matHeaderCellDef
+        >
+          Mjesto
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element; let i = index"
+          (dblclick)="handleRowDoubleClick(element)"
+          [ngClass]="{ 'blue-row': i % 2 !== 0, 'bordered-cell': true }"
+        >
+          {{ element.place }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <th
+          mat-header-cell
+          [ngClass]="{ 'blue-header': true, 'bordered-cell': true }"
+          *matHeaderCellDef
+        >
+          Opština
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element; let i = index"
+          (dblclick)="handleRowDoubleClick(element)"
+          [ngClass]="{ 'blue-row': i % 2 !== 0, 'bordered-cell': true }"
+        >
+          {{ element.city }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="country">
+        <th
+          mat-header-cell
+          [ngClass]="{ 'blue-header': true, 'bordered-cell': true }"
+          *matHeaderCellDef
+        >
+          Kanton
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element; let i = index"
+          (dblclick)="handleRowDoubleClick(element)"
+          [ngClass]="{ 'blue-row': i % 2 !== 0, 'bordered-cell': true }"
+        >
+          {{ element.country }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

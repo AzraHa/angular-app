@@ -1,0 +1,126 @@
+.center-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid grey;
+  margin: 10px;
+  padding: 10px;
+  width: 75%;
+}
+
+.modal-form {
+  width: 100%;
+}
+
+.modal-content {
+  flex: 1;
+  padding: 10px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.custom-input {
+  background-color: #f0e9d4;
+  width: 90%;
+}
+
+.place-input {
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.place-input span {
+  padding: 5px;
+  white-space: nowrap;
+  width: 25%;
+}
+
+.place-input input {
+  border-radius: 0;
+}
+
+.submit-button-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.bottom-right-button {
+  bottom: 1px;
+  background-color: lightblue;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.blue-header {
+  background-color: blue !important;
+  color: wheat !important;
+}
+
+.blue-row {
+  background-color: lightblue;
+}
+
+.bordered-cell {
+  border: 1px solid darkblue;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  display: table-header-group;
+}
+
+thead th {
+  border: 1px solid blue !important;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+.data-table {
+  cursor: pointer !important;
+  margin-top: 20px;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: auto;
+}
+
+.right-content button {
+  margin-left: 30px;
+}
+
+.custom-button {
+  height: 24px;
+  width: 24px;
+  margin-right: 16px;
+  padding: 0;
+  margin-left: auto;
+}
+
+.custom-toolbar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
