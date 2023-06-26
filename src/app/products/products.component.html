@@ -1,0 +1,45 @@
+<div class="product-details-container">
+  <div class="product-details">
+    <button class="corner-button">Kontakt1</button>
+    <div class="left-div">
+      <div class="left-div-separator">
+        <div class="contact">Račun:</div>
+        <input class="contact-info" />
+      </div>
+
+      <div class="left-div-separator">
+        <div class="contact">Tip kontakta:</div>
+        <input class="contact-info" />
+      </div>
+    </div>
+    <div class="right-div-container">
+      <div class="right-div">
+        <div class="empty-div"></div>
+        <div class="label">Poštanska adresa:</div>
+        <table>
+          <tr
+            ng-repeat="x in names"
+            class="table-row"
+            [ngClass]="{ 'light-blue-row': true, }"
+          >
+            <td>Adresa</td>
+            <td>Pošta</td>
+            <td>Mjesto</td>
+            <td>Država</td>
+          </tr>
+          <tr ng-repeat="x in names" class="table-row">
+            <td>hehe2heh2</td>
+            <td>haha2</td>
+            <td>hehe2</td>
+            <td>haha2</td>
+          </tr>
+        </table>
+      </div>
+      <div class="right-div">
+        <div class="empty-div"></div>
+        <div class="label">Mail adresa:</div>
+        <input class="mail-input" />
+      </div>
+    </div>
+  </div>
+</div>

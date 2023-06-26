@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
 import { InputClickComponent } from './input-click/input-click.component';
 import { ChildComponent } from './child/child.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [AppComponent, ChildComponent],
@@ -28,6 +29,7 @@ import { ChildComponent } from './child/child.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     InputClickComponent,
+    ProductsComponent,
   ],
 })
 export class AppModule {}

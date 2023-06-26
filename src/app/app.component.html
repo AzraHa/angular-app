@@ -3,11 +3,16 @@
   openCountriesDialog
 </button> -->
 <!--  -->
-<app-input-click (buttonClicked)="parentEventHandlerFunction($event)"></app-input-click>
+<!-- <app-input-click
+  (buttonClicked)="parentEventHandlerFunction($event)"
+></app-input-click>
 {{ valueEmittedFromChildComponent }}
 <div style="border: solid 1px gray; padding: 15px">
   <h1>Parent Component</h1>
   <span><b>Value emitted from child component is:</b></span>
   {{ valueEmittedFromChildComponent }}
   <app-child (buttonClicked)="parentEventHandlerFunction($event)"> </app-child>
-</div>
+</div> -->
+
+<app-products></app-products>
+

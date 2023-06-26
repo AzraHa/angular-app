@@ -1,0 +1,169 @@
+.product-details-container {
+  margin-top: 50px;
+  border: 1px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 90%;
+}
+
+.corner-button {
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  background-color: blue;
+  color: white;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-div {
+  margin-left: 50px;
+  display: flex;
+  margin: 20px;
+}
+
+.left-div-separator {
+  margin-left: 50px;
+  display: flex;
+}
+
+.contact {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 5px;
+  height: 30px;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-info {
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid black;
+}
+
+.right-div-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.empty-div {
+  width: 30%;
+}
+
+.right-div {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.mail-input {
+  width: 30%;
+  margin-top: 35px;
+  width: 205px;
+  border-radius: 0;
+  border: 1px solid black;
+  height: 30px;
+}
+
+.right-div-mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-content {
+  display: flex;
+}
+.right-div2 {
+  display: flex;
+  width: 100%; /* Set the width to 100% */
+}
+
+.mail-content .label {
+  text-align: center;
+  margin-top: 50px;
+  white-space: nowrap;
+  padding-right: 3px;
+}
+
+.label {
+  text-align: center;
+  margin-top: 50px;
+  white-space: nowrap;
+  padding-right: 3px;
+}
+
+/* .table-row {
+  border: 1px solid black !important;
+} */
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  table-layout: fixed;
+}
+
+thead {
+  display: table-header-group;
+}
+
+thead th {
+  border: 1px solid blue !important;
+  background-color: lightblue !important;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+td {
+  border: 1px solid black !important;
+  min-width: 70px;
+  padding: 10px;
+}
+
+.light-blue-row {
+  background-color: lightblue !important;
+}
+
+.table-email-input {
+  border: 1px solid black !important;
+  height: 40px;
+  padding: 10px;
+}
+
+.moja-tabela {
+  height: 30px;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.hide-border {
+  visibility: hidden;
+}
+.moja-tabela {
+  width: 100%;
+}
+
+.moja-tabela tr {
+  width: 70px;
+}
+
+.light-blue-rowx {
+  width: 70px;
+}
