@@ -24,6 +24,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 export class ProductsComponent {
   rowIndex = 0;
   displayedColumns: string[] = ['place', 'city', 'country'];
+  items = [
+    { id: 1, name: 'Prvi element' },
+    { id: 2, name: 'Drugi element' },
+    { id: 3, name: 'Treći element' },
+  ];
 
   ELEMENT_DATA: any[] = [
     { place: 'Novi Grad', city: 'Sarajevo', country: 'Bosna i Hercegovina' },

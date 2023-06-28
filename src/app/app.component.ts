@@ -52,6 +52,7 @@ export class AppComponent {
   valueEmittedFromChildComponent: any;
 
   parentEventHandlerFunction(valueEmitted: any) {
-    this.valueEmittedFromChildComponent = valueEmitted;
+    alert([valueEmitted.name, valueEmitted.lastName, valueEmitted.JMBG]);
+    this.valueEmittedFromChildComponent = valueEmitted.name;
   }
 }

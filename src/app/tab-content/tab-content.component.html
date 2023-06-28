@@ -1,0 +1,14 @@
+<div class="tabs">
+  <div
+    class="tab"
+    *ngFor="let tab of tabData; let i = index"
+    [class.active]="activeTabIndex === i"
+    (click)="setActiveTab(i)"
+  >
+    {{ tab.title }}
+  </div>
+</div>
+
+<div class="content">
+  <app-my-child-component ></app-my-child-component>
+</div>

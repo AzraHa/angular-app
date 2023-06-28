@@ -12,9 +12,11 @@ import { AppComponent } from './app.component';
 import { InputClickComponent } from './input-click/input-click.component';
 import { ChildComponent } from './child/child.component';
 import { ProductsComponent } from './products/products.component';
+import { TabContentComponent } from './tab-content/tab-content.component';
+import { MyChildComponent } from './my-child-component/my-child-component.component';
 
 @NgModule({
-  declarations: [AppComponent, ChildComponent],
+  declarations: [AppComponent],
   providers: [
     { provide: MatDialogRef, useValue: {} },
     { provide: MAT_DIALOG_DATA, useValue: {} },
@@ -30,6 +32,9 @@ import { ProductsComponent } from './products/products.component';
     ReactiveFormsModule,
     InputClickComponent,
     ProductsComponent,
+    TabContentComponent,
+    ChildComponent,
+    MyChildComponent,
   ],
 })
 export class AppModule {}

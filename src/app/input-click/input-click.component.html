@@ -2,6 +2,17 @@
 
 <button (click)="openDialog2()">haj sad</button>
 
+
+
+<input [(ngModel)]="name" (keydown.enter)="onEnter()" required>
+<div *ngIf="nameError" class="error-message">Name is required</div>
+
+<input [(ngModel)]="lastName" (keydown.enter)="onEnter()" required>
+<div *ngIf="lastNameError" class="error-message">Lastname is required</div>
+
+<input [(ngModel)]="JMBG" (keydown.enter)="onEnter()" required>
+<div *ngIf="JMBGError" class="error-message">JMBG is required</div>
+
 <input
   type="text"
   (click)="openDialog()"
